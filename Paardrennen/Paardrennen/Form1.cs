@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Paardrennen
 {
-    public partial class Form1 : Form
+    public partial class frmPaardrennen : Form
     {
-        public Form1()
+        public frmPaardrennen()
         {
             InitializeComponent();
         }
