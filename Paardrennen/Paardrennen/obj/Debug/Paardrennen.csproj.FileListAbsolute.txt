@@ -1,0 +1,12 @@
+D:\School\6IB\Paardrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.csprojAssemblyReference.cache
+D:\School\6IB\Paardrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.frmPaardrennen.resources
+D:\School\6IB\Paardrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.Properties.Resources.resources
+D:\School\6IB\Paardrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.csproj.GenerateResource.cache
+D:\School\6IB\Paardrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.csproj.CoreCompileInputs.cache
+D:\School\6IB\Paardrennen\Paardrennen\Paardrennen\bin\Debug\Paardrennen.exe.config
+D:\School\6IB\Paardrennen\Paardrennen\Paardrennen\bin\Debug\Paardrennen.exe
+D:\School\6IB\Paardrennen\Paardrennen\Paardrennen\bin\Debug\Paardrennen.pdb
+D:\School\6IB\Paardrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.frmFinancien.resources
+D:\School\6IB\Paardrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.exe
+D:\School\6IB\Paardrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.pdb
+D:\School\6IB\Paardrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.frmPaardenBets.resources
