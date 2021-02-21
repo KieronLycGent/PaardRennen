@@ -15,6 +15,7 @@ namespace Paardrennen
         public frmPaardrennen()
         {
             InitializeComponent();
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
         }
         bool actie; // kijkt of de paarden actief zijn of niet.
         static int paard = 0; // 0 is een NULLvalue --> als 0 is dan mag code NIET runnen
@@ -61,10 +62,15 @@ namespace Paardrennen
         private void frmPaardrennen_Activated(object sender, EventArgs e)
         {
             updateMunz();
-            if(paard != 0)
+            if (paard != 0)
             {
-                btnBieden.Enabled = false;
-                txtGokMunz.Enabled = false;
+                //btnBieden.Enabled = false;
+                //txtGokMunz.Enabled = false;
+            }
+            else
+            {
+                btnBieden.Enabled = true;
+                txtGokMunz.Enabled = true;
             }
         }
 
@@ -203,7 +209,7 @@ namespace Paardrennen
                 tPaard.Enabled = false;
                 btnBieden.Enabled = true;
                 txtGokMunz.Enabled = true;
-                paard = 0;
+                
                 if(winnaar == paard)
                 {
                     MessageBox.Show("Gefeliciteerd u hebt gewonnen!", "Gewonnen!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -224,6 +230,7 @@ namespace Paardrennen
                 {
                     MessageBox.Show("Helaas, u hebt verloren, probeer het nog een keer.", "Verloren...", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                paard = 0;
                 updateMunz();
                 winnaar = 0;
             }
