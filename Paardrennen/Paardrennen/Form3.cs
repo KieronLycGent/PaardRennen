@@ -48,5 +48,12 @@ namespace Paardrennen
             frmPaardrennen.setPaard(paard);
             this.Close();
         }
+
+        private void frmPaardenBets_Load(object sender, EventArgs e)
+        {
+            pctbP1Select.Image = Properties.Resources.jokky_on_horse;
+            pctbP2Select.Image = Properties.Resources.jokky_on_horse_blouw;
+            pctbP3Select.Image = Properties.Resources.jokky_on_horse_groen;
+        }
     }
 }

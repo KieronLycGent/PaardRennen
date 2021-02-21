@@ -96,9 +96,11 @@ namespace Paardrennen
                     frmPaardenBets frmPB = new frmPaardenBets();
                     frmPB.Show();
                     actie = true;
+                    //Dit moet verplaatst worden naar waar de race echt start---------------
                     pctbPaard1.Image = Properties.Resources.jokky_on_horse;
-                    pctbPaard2.Image = Properties.Resources.jokky_on_horse;
-                    pctbPaard3.Image = Properties.Resources.jokky_on_horse;
+                    pctbPaard2.Image = Properties.Resources.jokky_on_horse_blouw;
+                    pctbPaard3.Image = Properties.Resources.jokky_on_horse_groen;
+                    //Dit moet verplaatst worden naar waar de race echt start---------------
                 }
             }
         }
@@ -125,8 +127,13 @@ namespace Paardrennen
         {
             pctbFinish.Image = Properties.Resources.finich;
             pctbPaard1.Image = Properties.Resources.jokky_on_horse1;
-            pctbPaard2.Image = Properties.Resources.jokky_on_horse1;
-            pctbPaard3.Image = Properties.Resources.jokky_on_horse1;
+            pctbPaard2.Image = Properties.Resources.jokky_on_horse_blouw1;
+            pctbPaard3.Image = Properties.Resources.jokky_on_horse_groen1;
+        }
+
+        private void informatieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Gemaakt door Sepp Degroote en Kieron Parmentier","Info", MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
     }
 }

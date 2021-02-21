@@ -83,6 +83,46 @@ namespace Paardrennen.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap jokky_on_horse_blouw {
+            get {
+                object obj = ResourceManager.GetObject("jokky_on_horse_blouw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jokky_on_horse_blouw1 {
+            get {
+                object obj = ResourceManager.GetObject("jokky_on_horse_blouw1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jokky_on_horse_groen {
+            get {
+                object obj = ResourceManager.GetObject("jokky_on_horse_groen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jokky_on_horse_groen1 {
+            get {
+                object obj = ResourceManager.GetObject("jokky_on_horse_groen1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap jokky_on_horse1 {
             get {
                 object obj = ResourceManager.GetObject("jokky_on_horse1", resourceCulture);
