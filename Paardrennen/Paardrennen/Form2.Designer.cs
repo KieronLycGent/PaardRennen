@@ -38,9 +38,10 @@
             // 
             // btnChange
             // 
-            this.btnChange.Location = new System.Drawing.Point(100, 28);
+            this.btnChange.Location = new System.Drawing.Point(133, 34);
+            this.btnChange.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(75, 23);
+            this.btnChange.Size = new System.Drawing.Size(100, 63);
             this.btnChange.TabIndex = 0;
             this.btnChange.Text = "PH_+/-";
             this.btnChange.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(100, 57);
+            this.btnClose.Location = new System.Drawing.Point(133, 105);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 70);
+            this.btnClose.Size = new System.Drawing.Size(100, 51);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Sluiten";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -58,50 +60,54 @@
             // 
             // txtChange
             // 
-            this.txtChange.Location = new System.Drawing.Point(12, 30);
+            this.txtChange.Location = new System.Drawing.Point(16, 37);
+            this.txtChange.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtChange.Name = "txtChange";
-            this.txtChange.Size = new System.Drawing.Size(82, 20);
+            this.txtChange.Size = new System.Drawing.Size(108, 22);
             this.txtChange.TabIndex = 2;
             // 
             // lblState
             // 
             this.lblState.AutoSize = true;
-            this.lblState.Location = new System.Drawing.Point(12, 14);
+            this.lblState.Location = new System.Drawing.Point(16, 17);
+            this.lblState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(70, 13);
+            this.lblState.Size = new System.Drawing.Size(89, 17);
             this.lblState.TabIndex = 3;
             this.lblState.Text = "ERR_NotDef";
             // 
             // lblCurrMunz
             // 
             this.lblCurrMunz.AutoSize = true;
-            this.lblCurrMunz.Location = new System.Drawing.Point(12, 70);
+            this.lblCurrMunz.Location = new System.Drawing.Point(16, 86);
+            this.lblCurrMunz.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCurrMunz.Name = "lblCurrMunz";
-            this.lblCurrMunz.Size = new System.Drawing.Size(41, 13);
+            this.lblCurrMunz.Size = new System.Drawing.Size(52, 17);
             this.lblCurrMunz.TabIndex = 4;
             this.lblCurrMunz.Text = "€NULL";
             // 
             // lblTitelMunzIguess
             // 
             this.lblTitelMunzIguess.AutoSize = true;
-            this.lblTitelMunzIguess.Location = new System.Drawing.Point(9, 57);
+            this.lblTitelMunzIguess.Location = new System.Drawing.Point(12, 70);
+            this.lblTitelMunzIguess.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitelMunzIguess.Name = "lblTitelMunzIguess";
-            this.lblTitelMunzIguess.Size = new System.Drawing.Size(81, 13);
+            this.lblTitelMunzIguess.Size = new System.Drawing.Size(107, 17);
             this.lblTitelMunzIguess.TabIndex = 5;
             this.lblTitelMunzIguess.Text = "Aantal geld nu: ";
             // 
             // frmFinancien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(187, 139);
+            this.ClientSize = new System.Drawing.Size(249, 171);
             this.Controls.Add(this.lblTitelMunzIguess);
             this.Controls.Add(this.lblCurrMunz);
             this.Controls.Add(this.lblState);
             this.Controls.Add(this.txtChange);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnChange);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmFinancien";
             this.Text = "Financiën";
             this.Activated += new System.EventHandler(this.frmFinancien_Activated);

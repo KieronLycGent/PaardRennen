@@ -46,7 +46,7 @@ namespace Paardrennen
         private void select()
         {
             frmPaardrennen.setPaard(paard);
-            this.Hide();
+            this.Close();
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Paardrennen
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         int munz;
@@ -53,20 +53,23 @@ namespace Paardrennen
 
         private void btnChange_Click(object sender, EventArgs e)
         {
-            //TODO: filter op dees --> moet int zijn.
-            //Begin filter---------------------
-
-            //Einde filter---------------------
-            if(finState == 0)
+            //filter kijkt of het een int is en zet het dan in een variabele
+            int GokMunz;
+            if (!int.TryParse(txtChange.Text, out GokMunz))
             {
-                frmPaardrennen.setMunz(munz + Convert.ToInt32(txtChange.Text));
+                txtChange.Select();
+                MessageBox.Show("U moet een geldig getal ingeven.", "Fout: geen getal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (finState == 0)
+            {
+                frmPaardrennen.setMunz(munz + GokMunz);
                 btnClose.Select();//miss moet ik automatisch hiden? --> need feedback ~Kieron
             }
             else if(finState == 1)
             {
                 if((munz - Convert.ToInt32(txtChange.Text)) >= 0) //Om in het rood te gaan te voorkomen
                 {
-                    frmPaardrennen.setMunz(munz - Convert.ToInt32(txtChange.Text));
+                    frmPaardrennen.setMunz(munz - GokMunz);
                     btnClose.Select();//Zie line63
                 }
                 else

@@ -20,18 +20,19 @@ namespace Paardrennen
         static int paard = 0; // 0 is een NULLvalue --> als 0 is dan mag code NIET runnen
         static int munz = 0;
         static int finState = 0; // als Finance state (finState) = 0 --> Storten / als finState = 1 --> Afhalen
-        frmFinancien frmFin = new frmFinancien();
-        frmPaardenBets frmPB = new frmPaardenBets();
+        
 
         private void stortenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             finState = 0;
+            frmFinancien frmFin = new frmFinancien();
             frmFin.Show();
         }
 
         private void afhalenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             finState = 1;
+            frmFinancien frmFin = new frmFinancien();
             frmFin.Show();
         }
 
@@ -71,18 +72,28 @@ namespace Paardrennen
 
         private void btnBieden_Click(object sender, EventArgs e)
         {
-            if(txtGokMunz.Text == "")
+
+            int GokMunz;
+            if (!int.TryParse(txtGokMunz.Text, out GokMunz))
+            {
+                MessageBox.Show("U moet een geldig getal ingeven.", "Fout: geen getal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtGokMunz.Select();
+            }
+            else if (txtGokMunz.Text == "")
             {
                 MessageBox.Show("U moet een bedrag invullen om te kunnen bieden.", "Fout: geen input", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                txtGokMunz.Select();
             }
             else
             {
-                if (munz < Convert.ToInt32(txtGokMunz.Text))
+                if (munz < GokMunz)
                 {
                     MessageBox.Show("U hebt te weinig geld. Gelieve meer te storten als u nog wilt spelen.", "Fout: tekort aan geld", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    txtGokMunz.Select();
                 }
                 else 
                 {
+                    frmPaardenBets frmPB = new frmPaardenBets();
                     frmPB.Show();
                     actie = true;
                 }
@@ -100,6 +111,11 @@ namespace Paardrennen
                 //EIND CODE PAARDEN---------
             }
             actie = false;
+        }
+
+        private void sluitenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
