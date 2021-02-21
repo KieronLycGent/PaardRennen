@@ -59,7 +59,7 @@ namespace Paardrennen
             // pctbFinish
             // 
             this.pctbFinish.Image = ((System.Drawing.Image)(resources.GetObject("pctbFinish.Image")));
-            this.pctbFinish.Location = new System.Drawing.Point(837, 57);
+            this.pctbFinish.Location = new System.Drawing.Point(920, 57);
             this.pctbFinish.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pctbFinish.Name = "pctbFinish";
             this.pctbFinish.Size = new System.Drawing.Size(237, 422);
@@ -218,6 +218,7 @@ namespace Paardrennen
             this.Name = "frmPaardrennen";
             this.Text = "Paardrennen";
             this.Activated += new System.EventHandler(this.frmPaardrennen_Activated);
+            this.Load += new System.EventHandler(this.frmPaardrennen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctbFinish)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctbPaard1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctbPaard2)).EndInit();

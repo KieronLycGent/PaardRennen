@@ -96,6 +96,9 @@ namespace Paardrennen
                     frmPaardenBets frmPB = new frmPaardenBets();
                     frmPB.Show();
                     actie = true;
+                    pctbPaard1.Image = Properties.Resources.jokky_on_horse;
+                    pctbPaard2.Image = Properties.Resources.jokky_on_horse;
+                    pctbPaard3.Image = Properties.Resources.jokky_on_horse;
                 }
             }
         }
@@ -116,6 +119,14 @@ namespace Paardrennen
         private void sluitenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void frmPaardrennen_Load(object sender, EventArgs e)
+        {
+            pctbFinish.Image = Properties.Resources.finich;
+            pctbPaard1.Image = Properties.Resources.jokky_on_horse1;
+            pctbPaard2.Image = Properties.Resources.jokky_on_horse1;
+            pctbPaard3.Image = Properties.Resources.jokky_on_horse1;
         }
     }
 }
