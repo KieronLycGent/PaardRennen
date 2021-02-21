@@ -102,9 +102,6 @@
     <None Include="Resources\Image1.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\finich.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\jokky on horse.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +121,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\jokky on horse blouw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finich.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

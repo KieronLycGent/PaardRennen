@@ -20,7 +20,9 @@ namespace Paardrennen
         static int paard = 0; // 0 is een NULLvalue --> als 0 is dan mag code NIET runnen
         static int munz = 0;
         static int finState = 0; // als Finance state (finState) = 0 --> Storten / als finState = 1 --> Afhalen
-        
+        private Random rng = new Random();
+        private int winnaar = 0; //0 is NULLvalue --> dus het mag niet nul zijn op het ezind van het spel
+        private int gok = 0;
 
         private void stortenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -59,9 +61,10 @@ namespace Paardrennen
         private void frmPaardrennen_Activated(object sender, EventArgs e)
         {
             updateMunz();
-            if (actie)
+            if(paard != 0)
             {
-                paardActie();
+                btnBieden.Enabled = false;
+                txtGokMunz.Enabled = false;
             }
         }
 
@@ -96,11 +99,7 @@ namespace Paardrennen
                     frmPaardenBets frmPB = new frmPaardenBets();
                     frmPB.Show();
                     actie = true;
-                    //Dit moet verplaatst worden naar waar de race echt start---------------
-                    pctbPaard1.Image = Properties.Resources.jokky_on_horse;
-                    pctbPaard2.Image = Properties.Resources.jokky_on_horse_blouw;
-                    pctbPaard3.Image = Properties.Resources.jokky_on_horse_groen;
-                    //Dit moet verplaatst worden naar waar de race echt start---------------
+                    
                 }
             }
         }
@@ -108,12 +107,21 @@ namespace Paardrennen
         private void paardActie()
         {
             if (paard != 0)
-            { 
-                //CODE VOOR PAARDEN---------
+            {
+                gok = Convert.ToInt32(txtGokMunz.Text);
                 munz = munz - Convert.ToInt32(txtGokMunz.Text);
-                //PH:
-                    MessageBox.Show(paard + "e selectie, nu de code klaarzetten hier e, anders is't fucked");
-                //EIND CODE PAARDEN---------
+                updateMunz();
+                txtGokMunz.Text = null;
+                tPaard.Interval = 100;
+                tPaard.Enabled = true;
+              
+            }
+            else
+            {
+                //STOP! Hammer time!
+                pctbPaard1.Image = Properties.Resources.jokky_on_horse1;
+                pctbPaard2.Image = Properties.Resources.jokky_on_horse_blouw1;
+                pctbPaard3.Image = Properties.Resources.jokky_on_horse_groen1;
             }
             actie = false;
         }
@@ -127,13 +135,139 @@ namespace Paardrennen
         {
             pctbFinish.Image = Properties.Resources.finich;
             pctbPaard1.Image = Properties.Resources.jokky_on_horse1;
+            pctbPaard1.BackColor = Color.Transparent;
             pctbPaard2.Image = Properties.Resources.jokky_on_horse_blouw1;
+            pctbPaard2.BackColor = Color.Transparent;
             pctbPaard3.Image = Properties.Resources.jokky_on_horse_groen1;
+            pctbPaard3.BackColor = Color.Transparent;
         }
 
         private void informatieToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Gemaakt door Sepp Degroote en Kieron Parmentier","Info", MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
+
+        private void pctbStart_Click(object sender, EventArgs e)
+        {
+            updateMunz();
+            if (actie)
+            {
+                //They like to move it move it (Jpeg--> GIF)
+                pctbPaard1.Image = Properties.Resources.jokky_on_horse;
+                pctbPaard2.Image = Properties.Resources.jokky_on_horse_blouw;
+                pctbPaard3.Image = Properties.Resources.jokky_on_horse_groen;
+                paardActie();
+            }
+            else
+            {
+                MessageBox.Show("U moet eerst een paard selecteren om te kunnen starten.","Fout: geen paard",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private void tPaard_Tick(object sender, EventArgs e)
+        {
+            //30 is startpos 650 is finshpos en 1000 is uitloop.
+
+            p1Adv();
+            p2Adv();
+            p3Adv();
+            
+            if(pctbPaard1.Left >= 800 && pctbPaard2.Left >= 800 && pctbPaard3.Left >= 800)
+            {
+                int temp = int.MinValue;
+                if(pctbPaard1.Left > temp)
+                {
+                    winnaar = 1;
+                    temp = pctbPaard1.Left;
+                    if(pctbPaard2.Left > temp)
+                    {
+                        winnaar = 2;
+                        temp = pctbPaard2.Left;
+                        if(pctbPaard3.Left > temp)
+                        {
+                            winnaar = 3;
+                        }
+                    }
+                    else if(pctbPaard3.Left > temp)
+                    {
+                        winnaar = 3;
+                    }
+                }
+                //STOP! Hammer time!
+                pctbPaard1.Image = Properties.Resources.jokky_on_horse1;
+                pctbPaard2.Image = Properties.Resources.jokky_on_horse_blouw1;
+                pctbPaard3.Image = Properties.Resources.jokky_on_horse_groen1;
+                pctbPaard1.Left = 30;
+                pctbPaard2.Left = 30;
+                pctbPaard3.Left = 30;
+                tPaard.Enabled = false;
+                btnBieden.Enabled = true;
+                txtGokMunz.Enabled = true;
+                paard = 0;
+                if(winnaar == paard)
+                {
+                    MessageBox.Show("Gefeliciteerd u hebt gewonnen!", "Gewonnen!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    switch (paard)
+                    {
+                        case 1:
+                            munz = munz + (gok * 2);
+                            break;
+                        case 2:
+                            munz = munz + (gok * 3);
+                            break;
+                        case 3:
+                            munz = munz + (gok * 5);
+                            break;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Helaas, u hebt verloren, probeer het nog een keer.", "Verloren...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                updateMunz();
+                winnaar = 0;
+            }
+        }
+
+        private void p1Adv()
+        {
+            if (pctbPaard1.Left < 650)
+            {
+                pctbPaard1.Left = pctbPaard1.Left + rng.Next(15,20);
+            }
+            else if (pctbPaard1.Left >= 650 && pctbPaard1.Left < 1000)
+            {
+                pctbPaard1.Left = pctbPaard1.Left + 10;
+            }
+        }
+
+        private void p2Adv()
+        {
+            if (pctbPaard2.Left < 650)
+            {
+                pctbPaard2.Left = pctbPaard2.Left + rng.Next(13,20);
+            }
+            else if (pctbPaard2.Left >= 650 && pctbPaard1.Left < 1000)
+            {
+                pctbPaard2.Left = pctbPaard2.Left + 10;
+            }
+        }
+
+        private void p3Adv()
+        {
+            if (pctbPaard3.Left < 650)
+            {
+                pctbPaard3.Left = pctbPaard3.Left + rng.Next(11,20);
+            }
+            else if (pctbPaard3.Left >= 650 && pctbPaard1.Left < 1000)
+            {
+                pctbPaard3.Left = pctbPaard3.Left + 10;
+            }
+        }
+
+        private void achtergrondToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
