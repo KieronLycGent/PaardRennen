@@ -34,3 +34,15 @@ D:\school 6ib\C#\paardenrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.csp
 D:\school 6ib\C#\paardenrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.csproj.CoreCompileInputs.cache
 D:\school 6ib\C#\paardenrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.exe
 D:\school 6ib\C#\paardenrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.pdb
+C:\Users\rll6ib\Documents\KieronParmentier\Paardrennen\PaardRennen\Paardrennen\Paardrennen\bin\Debug\Paardrennen.exe.config
+C:\Users\rll6ib\Documents\KieronParmentier\Paardrennen\PaardRennen\Paardrennen\Paardrennen\bin\Debug\Paardrennen.exe
+C:\Users\rll6ib\Documents\KieronParmentier\Paardrennen\PaardRennen\Paardrennen\Paardrennen\bin\Debug\Paardrennen.pdb
+C:\Users\rll6ib\Documents\KieronParmentier\Paardrennen\PaardRennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.csprojAssemblyReference.cache
+C:\Users\rll6ib\Documents\KieronParmentier\Paardrennen\PaardRennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.frmPaardrennen.resources
+C:\Users\rll6ib\Documents\KieronParmentier\Paardrennen\PaardRennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.frmFinancien.resources
+C:\Users\rll6ib\Documents\KieronParmentier\Paardrennen\PaardRennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.frmPaardenBets.resources
+C:\Users\rll6ib\Documents\KieronParmentier\Paardrennen\PaardRennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.Properties.Resources.resources
+C:\Users\rll6ib\Documents\KieronParmentier\Paardrennen\PaardRennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.csproj.GenerateResource.cache
+C:\Users\rll6ib\Documents\KieronParmentier\Paardrennen\PaardRennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.csproj.CoreCompileInputs.cache
+C:\Users\rll6ib\Documents\KieronParmentier\Paardrennen\PaardRennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.exe
+C:\Users\rll6ib\Documents\KieronParmentier\Paardrennen\PaardRennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.pdb

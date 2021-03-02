@@ -230,6 +230,7 @@ namespace Paardrennen
                 {
                     MessageBox.Show("Helaas, u hebt verloren, probeer het nog een keer.", "Verloren...", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                MessageBox.Show(Convert.ToString(winnaar));
                 paard = 0;
                 updateMunz();
                 winnaar = 0;
@@ -238,9 +239,10 @@ namespace Paardrennen
 
         private void p1Adv()
         {
+            //De snelste
             if (pctbPaard1.Left < 650)
             {
-                pctbPaard1.Left = pctbPaard1.Left + rng.Next(15,20);
+                pctbPaard1.Left = pctbPaard1.Left + Convert.ToInt32(rng.Next(1250, 3750)/100);
             }
             else if (pctbPaard1.Left >= 650 && pctbPaard1.Left < 1000)
             {
@@ -250,9 +252,10 @@ namespace Paardrennen
 
         private void p2Adv()
         {
+            //heel consequente snelheid
             if (pctbPaard2.Left < 650)
             {
-                pctbPaard2.Left = pctbPaard2.Left + rng.Next(13,20);
+                pctbPaard2.Left = pctbPaard2.Left + Convert.ToInt32(rng.Next(2000, 3250) / 100);
             }
             else if (pctbPaard2.Left >= 650 && pctbPaard1.Left < 1000)
             {
@@ -262,9 +265,10 @@ namespace Paardrennen
 
         private void p3Adv()
         {
+            //erratic
             if (pctbPaard3.Left < 650)
             {
-                pctbPaard3.Left = pctbPaard3.Left + rng.Next(11,20);
+                pctbPaard3.Left = pctbPaard3.Left + Convert.ToInt32(rng.Next(750, 4250) / 100);
             }
             else if (pctbPaard3.Left >= 650 && pctbPaard1.Left < 1000)
             {
