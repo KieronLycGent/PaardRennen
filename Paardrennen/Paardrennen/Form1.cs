@@ -146,6 +146,7 @@ namespace Paardrennen
             pctbPaard2.BackColor = Color.Transparent;
             pctbPaard3.Image = Properties.Resources.jokky_on_horse_groen1;
             pctbPaard3.BackColor = Color.Transparent;
+            lblOpEerstePlaats.Visible = false;
         }
 
         private void informatieToolStripMenuItem_Click(object sender, EventArgs e)
@@ -163,6 +164,7 @@ namespace Paardrennen
                 pctbPaard2.Image = Properties.Resources.jokky_on_horse_blouw;
                 pctbPaard3.Image = Properties.Resources.jokky_on_horse_groen;
                 paardActie();
+                lblOpEerstePlaats.Visible = true;
             }
             else
             {
@@ -177,8 +179,19 @@ namespace Paardrennen
             p1Adv();
             p2Adv();
             p3Adv();
-            
-            if(pctbPaard1.Left >= 800 && pctbPaard2.Left >= 800 && pctbPaard3.Left >= 800)
+            if (pctbPaard1.Left >= pctbPaard2.Left && pctbPaard1.Left >= pctbPaard3.Left)
+            {
+                lblOpEerstePlaats.Text = "Paard 1 staat voorop!";
+            }
+            else if (pctbPaard2.Left >= pctbPaard1.Left && pctbPaard2.Left >= pctbPaard3.Left)
+            {
+                lblOpEerstePlaats.Text = "Paard 2 staat voorop!";
+            }
+            else if (pctbPaard3.Left >= pctbPaard1.Left && pctbPaard3.Left >= pctbPaard2.Left)
+            {
+                lblOpEerstePlaats.Text = "Paard 3 staat voorop!";
+            }
+            if (pctbPaard1.Left >= 800 && pctbPaard2.Left >= 800 && pctbPaard3.Left >= 800)
             {
                 int temp = int.MinValue;
                 if(pctbPaard1.Left > temp)
@@ -230,7 +243,7 @@ namespace Paardrennen
                 {
                     MessageBox.Show("Helaas, u hebt verloren, probeer het nog een keer.", "Verloren...", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                MessageBox.Show(Convert.ToString(winnaar));
+                lblOpEerstePlaats.Visible = false;
                 paard = 0;
                 updateMunz();
                 winnaar = 0;

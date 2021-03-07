@@ -50,6 +50,7 @@ namespace Paardrennen
             this.pctbPaard2 = new System.Windows.Forms.PictureBox();
             this.pctbPaard1 = new System.Windows.Forms.PictureBox();
             this.pctbFinish = new System.Windows.Forms.PictureBox();
+            this.lblOpEerstePlaats = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctbStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctbPaard3)).BeginInit();
@@ -81,7 +82,7 @@ namespace Paardrennen
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1446, 38);
+            this.menuStrip1.Size = new System.Drawing.Size(1157, 28);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -89,7 +90,7 @@ namespace Paardrennen
             // 
             this.stortenToolStripMenuItem.Name = "stortenToolStripMenuItem";
             this.stortenToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.stortenToolStripMenuItem.Size = new System.Drawing.Size(71, 34);
+            this.stortenToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.stortenToolStripMenuItem.Text = "Storten";
             this.stortenToolStripMenuItem.Click += new System.EventHandler(this.stortenToolStripMenuItem_Click);
             // 
@@ -97,28 +98,28 @@ namespace Paardrennen
             // 
             this.afhalenToolStripMenuItem.Name = "afhalenToolStripMenuItem";
             this.afhalenToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.afhalenToolStripMenuItem.Size = new System.Drawing.Size(74, 34);
+            this.afhalenToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
             this.afhalenToolStripMenuItem.Text = "Afhalen";
             this.afhalenToolStripMenuItem.Click += new System.EventHandler(this.afhalenToolStripMenuItem_Click);
             // 
             // achtergrondToolStripMenuItem
             // 
             this.achtergrondToolStripMenuItem.Name = "achtergrondToolStripMenuItem";
-            this.achtergrondToolStripMenuItem.Size = new System.Drawing.Size(106, 34);
+            this.achtergrondToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.achtergrondToolStripMenuItem.Text = "Achtergrond";
             this.achtergrondToolStripMenuItem.Click += new System.EventHandler(this.achtergrondToolStripMenuItem_Click);
             // 
             // informatieToolStripMenuItem
             // 
             this.informatieToolStripMenuItem.Name = "informatieToolStripMenuItem";
-            this.informatieToolStripMenuItem.Size = new System.Drawing.Size(49, 34);
+            this.informatieToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.informatieToolStripMenuItem.Text = "Info";
             this.informatieToolStripMenuItem.Click += new System.EventHandler(this.informatieToolStripMenuItem_Click);
             // 
             // sluitenToolStripMenuItem
             // 
             this.sluitenToolStripMenuItem.Name = "sluitenToolStripMenuItem";
-            this.sluitenToolStripMenuItem.Size = new System.Drawing.Size(68, 34);
+            this.sluitenToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.sluitenToolStripMenuItem.Text = "Sluiten";
             this.sluitenToolStripMenuItem.Click += new System.EventHandler(this.sluitenToolStripMenuItem_Click);
             // 
@@ -224,12 +225,24 @@ namespace Paardrennen
             this.pctbFinish.TabIndex = 0;
             this.pctbFinish.TabStop = false;
             // 
+            // lblOpEerstePlaats
+            // 
+            this.lblOpEerstePlaats.AutoSize = true;
+            this.lblOpEerstePlaats.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOpEerstePlaats.Location = new System.Drawing.Point(447, 543);
+            this.lblOpEerstePlaats.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOpEerstePlaats.Name = "lblOpEerstePlaats";
+            this.lblOpEerstePlaats.Size = new System.Drawing.Size(160, 38);
+            this.lblOpEerstePlaats.TabIndex = 15;
+            this.lblOpEerstePlaats.Text = "Filler text";
+            // 
             // frmPaardrennen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1157, 641);
+            this.Controls.Add(this.lblOpEerstePlaats);
             this.Controls.Add(this.pctbStart);
             this.Controls.Add(this.lblInzetEnd);
             this.Controls.Add(this.lblInzetStart);
@@ -280,6 +293,7 @@ namespace Paardrennen
         private System.Windows.Forms.Timer tP2;
         private System.Windows.Forms.Timer tP3;
         private System.Windows.Forms.PictureBox pctbStart;
+        private System.Windows.Forms.Label lblOpEerstePlaats;
     }
 }
 
