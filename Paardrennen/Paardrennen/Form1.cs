@@ -151,7 +151,7 @@ namespace Paardrennen
 
         private void informatieToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Gemaakt door Sepp Degroote en Kieron Parmentier","Info", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Gemaakt door Sepp Degroote, Rein Goossens en Kieron Parmentier","Info", MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
         private void pctbStart_Click(object sender, EventArgs e)
@@ -165,6 +165,22 @@ namespace Paardrennen
                 pctbPaard3.Image = Properties.Resources.jokky_on_horse_groen;
                 paardActie();
                 lblOpEerstePlaats.Visible = true;
+                if (paard == 1) //If ladder die kiest welke arrow zichtbaar moet zijn
+                {
+                    pctbArrow1.Visible = true;
+                }
+                else if (paard == 2)
+                {
+                    pctbArrow2.Visible = true;
+                }
+                else if (paard == 3)
+                {
+                    pctbArrow3.Visible = true;
+                }
+                //Er zijn 3 arrows omdat dit makkelijker is + zetten pos hier al omdat dit er beter uitziet.
+                pctbArrow1.Left = -30; 
+                pctbArrow2.Left = -30;
+                pctbArrow3.Left = -30;
             }
             else
             {
@@ -179,17 +195,18 @@ namespace Paardrennen
             p1Adv();
             p2Adv();
             p3Adv();
+            arrowAdv();
             if (pctbPaard1.Left >= pctbPaard2.Left && pctbPaard1.Left >= pctbPaard3.Left)
             {
-                lblOpEerstePlaats.Text = "Paard 1 staat voorop!";
+                lblOpEerstePlaats.Text = "Jozef staat voorop!";
             }
             else if (pctbPaard2.Left >= pctbPaard1.Left && pctbPaard2.Left >= pctbPaard3.Left)
             {
-                lblOpEerstePlaats.Text = "Paard 2 staat voorop!";
+                lblOpEerstePlaats.Text = "Buttercup staat voorop!";
             }
             else if (pctbPaard3.Left >= pctbPaard1.Left && pctbPaard3.Left >= pctbPaard2.Left)
             {
-                lblOpEerstePlaats.Text = "Paard 3 staat voorop!";
+                lblOpEerstePlaats.Text = "Bob staat voorop!";
             }
             if (pctbPaard1.Left >= 800 && pctbPaard2.Left >= 800 && pctbPaard3.Left >= 800)
             {
@@ -244,6 +261,9 @@ namespace Paardrennen
                     MessageBox.Show("Helaas, u hebt verloren, probeer het nog een keer.", "Verloren...", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 lblOpEerstePlaats.Visible = false;
+                pctbArrow1.Visible = false;
+                pctbArrow2.Visible = false;
+                pctbArrow3.Visible = false;
                 paard = 0;
                 updateMunz();
                 winnaar = 0;
@@ -287,6 +307,13 @@ namespace Paardrennen
             {
                 pctbPaard3.Left = pctbPaard3.Left + 10;
             }
+        }
+
+        private void arrowAdv()
+        {
+            pctbArrow1.Left = pctbPaard1.Left-60;
+            pctbArrow2.Left = pctbPaard2.Left-60;
+            pctbArrow3.Left = pctbPaard3.Left-60;
         }
 
         private void achtergrondToolStripMenuItem_Click(object sender, EventArgs e)
