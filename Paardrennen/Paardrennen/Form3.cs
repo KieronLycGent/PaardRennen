@@ -51,6 +51,9 @@ namespace Paardrennen
 
         private void frmPaardenBets_Load(object sender, EventArgs e)
         {
+            lblDescP1.Text = "Heeft een hogere " + Environment.NewLine + "topsnelheid.";
+            lblDescP2.Text = "Niet de snelste " + Environment.NewLine + "maar een goed " + Environment.NewLine + "uithoudingsvermogen.";
+            lblDescP3.Text = "De snelheid hangt af " + Environment.NewLine + "van de dag die hij " + Environment.NewLine + "gehad heeft.";
             pctbP1Select.Image = Properties.Resources.jokky_on_horse;
             pctbP2Select.Image = Properties.Resources.jokky_on_horse_blouw;
             pctbP3Select.Image = Properties.Resources.jokky_on_horse_groen;

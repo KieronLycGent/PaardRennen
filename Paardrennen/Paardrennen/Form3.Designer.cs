@@ -53,40 +53,44 @@
             // lblP1
             // 
             this.lblP1.AutoSize = true;
+            this.lblP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblP1.Location = new System.Drawing.Point(16, 11);
             this.lblP1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblP1.Name = "lblP1";
-            this.lblP1.Size = new System.Drawing.Size(91, 17);
+            this.lblP1.Size = new System.Drawing.Size(69, 25);
             this.lblP1.TabIndex = 0;
-            this.lblP1.Text = "PH_P1NAAM";
+            this.lblP1.Text = "Jozef";
             // 
             // lblP2
             // 
             this.lblP2.AutoSize = true;
+            this.lblP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblP2.Location = new System.Drawing.Point(343, 11);
             this.lblP2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblP2.Name = "lblP2";
-            this.lblP2.Size = new System.Drawing.Size(91, 17);
+            this.lblP2.Size = new System.Drawing.Size(114, 25);
             this.lblP2.TabIndex = 1;
-            this.lblP2.Text = "PH_P2NAAM";
+            this.lblP2.Text = "Buttercup";
             // 
             // lblP3
             // 
             this.lblP3.AutoSize = true;
+            this.lblP3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblP3.Location = new System.Drawing.Point(657, 11);
             this.lblP3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblP3.Name = "lblP3";
-            this.lblP3.Size = new System.Drawing.Size(91, 17);
+            this.lblP3.Size = new System.Drawing.Size(53, 25);
             this.lblP3.TabIndex = 2;
-            this.lblP3.Text = "PH_P3NAAM";
+            this.lblP3.Text = "Bob";
             // 
             // lblDescP1Titel
             // 
             this.lblDescP1Titel.AutoSize = true;
+            this.lblDescP1Titel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescP1Titel.Location = new System.Drawing.Point(173, 31);
             this.lblDescP1Titel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescP1Titel.Name = "lblDescP1Titel";
-            this.lblDescP1Titel.Size = new System.Drawing.Size(88, 17);
+            this.lblDescP1Titel.Size = new System.Drawing.Size(126, 21);
             this.lblDescP1Titel.TabIndex = 6;
             this.lblDescP1Titel.Text = "Beschrijving:";
             // 
@@ -113,10 +117,11 @@
             // lblDescP2Titel
             // 
             this.lblDescP2Titel.AutoSize = true;
+            this.lblDescP2Titel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescP2Titel.Location = new System.Drawing.Point(500, 31);
             this.lblDescP2Titel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescP2Titel.Name = "lblDescP2Titel";
-            this.lblDescP2Titel.Size = new System.Drawing.Size(88, 17);
+            this.lblDescP2Titel.Size = new System.Drawing.Size(126, 21);
             this.lblDescP2Titel.TabIndex = 8;
             this.lblDescP2Titel.Text = "Beschrijving:";
             // 
@@ -133,10 +138,11 @@
             // lblDescP3Titel
             // 
             this.lblDescP3Titel.AutoSize = true;
+            this.lblDescP3Titel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescP3Titel.Location = new System.Drawing.Point(815, 31);
             this.lblDescP3Titel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescP3Titel.Name = "lblDescP3Titel";
-            this.lblDescP3Titel.Size = new System.Drawing.Size(88, 17);
+            this.lblDescP3Titel.Size = new System.Drawing.Size(126, 21);
             this.lblDescP3Titel.TabIndex = 10;
             this.lblDescP3Titel.Text = "Beschrijving:";
             // 
@@ -190,7 +196,7 @@
             // lblWinstP1
             // 
             this.lblWinstP1.AutoSize = true;
-            this.lblWinstP1.Location = new System.Drawing.Point(173, 64);
+            this.lblWinstP1.Location = new System.Drawing.Point(172, 138);
             this.lblWinstP1.Name = "lblWinstP1";
             this.lblWinstP1.Size = new System.Drawing.Size(46, 17);
             this.lblWinstP1.TabIndex = 13;
@@ -200,7 +206,7 @@
             // lblWinstP2
             // 
             this.lblWinstP2.AutoSize = true;
-            this.lblWinstP2.Location = new System.Drawing.Point(499, 64);
+            this.lblWinstP2.Location = new System.Drawing.Point(499, 138);
             this.lblWinstP2.Name = "lblWinstP2";
             this.lblWinstP2.Size = new System.Drawing.Size(46, 17);
             this.lblWinstP2.TabIndex = 14;
@@ -209,7 +215,7 @@
             // lblWinstP3
             // 
             this.lblWinstP3.AutoSize = true;
-            this.lblWinstP3.Location = new System.Drawing.Point(815, 64);
+            this.lblWinstP3.Location = new System.Drawing.Point(813, 138);
             this.lblWinstP3.Name = "lblWinstP3";
             this.lblWinstP3.Size = new System.Drawing.Size(46, 17);
             this.lblWinstP3.TabIndex = 15;
