@@ -24,6 +24,7 @@ namespace Paardrennen
         private Random rng = new Random();
         private int winnaar = 0; //0 is NULLvalue --> dus het mag niet nul zijn op het ezind van het spel
         private int gok = 0;
+        static int gokMunz = 0;
 
         private void stortenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -82,8 +83,7 @@ namespace Paardrennen
         private void btnBieden_Click(object sender, EventArgs e)
         {
 
-            int GokMunz;
-            if (!int.TryParse(txtGokMunz.Text, out GokMunz))
+            if (!int.TryParse(txtGokMunz.Text, out gokMunz))
             {
                 MessageBox.Show("U moet een geldig getal ingeven.", "Fout: geen getal", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtGokMunz.Select();
@@ -95,7 +95,7 @@ namespace Paardrennen
             }
             else
             {
-                if (munz < GokMunz)
+                if (munz < gokMunz)
                 {
                     MessageBox.Show("U hebt te weinig geld. Gelieve meer te storten als u nog wilt spelen.", "Fout: tekort aan geld", MessageBoxButtons.OK,MessageBoxIcon.Error);
                     txtGokMunz.Select();
@@ -279,6 +279,11 @@ namespace Paardrennen
         private void achtergrondToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        public static int getGokMunz() //functie voor winst berekenen in form3
+        {
+            return gokMunz;
         }
     }
 }

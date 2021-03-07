@@ -54,6 +54,17 @@ namespace Paardrennen
             pctbP1Select.Image = Properties.Resources.jokky_on_horse;
             pctbP2Select.Image = Properties.Resources.jokky_on_horse_blouw;
             pctbP3Select.Image = Properties.Resources.jokky_on_horse_groen;
+            double winst1 = frmPaardrennen.getGokMunz() * 2;
+            double winst2 = frmPaardrennen.getGokMunz() * 3;
+            double winst3 = frmPaardrennen.getGokMunz() * 5;
+            lblWinstP1.Text = "Winst: " + winst1.ToString() + ".";
+            lblWinstP2.Text = "Winst: " + winst2.ToString() + ".";
+            lblWinstP3.Text = "Winst: " + winst3.ToString() + ".";
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

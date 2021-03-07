@@ -42,6 +42,9 @@
             this.pctbP3Select = new System.Windows.Forms.PictureBox();
             this.pctbP2Select = new System.Windows.Forms.PictureBox();
             this.pctbP1Select = new System.Windows.Forms.PictureBox();
+            this.lblWinstP1 = new System.Windows.Forms.Label();
+            this.lblWinstP2 = new System.Windows.Forms.Label();
+            this.lblWinstP3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctbP3Select)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctbP2Select)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctbP1Select)).BeginInit();
@@ -140,7 +143,7 @@
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(984, 11);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 144);
             this.btnCancel.TabIndex = 12;
@@ -184,11 +187,42 @@
             this.pctbP1Select.TabStop = false;
             this.pctbP1Select.Click += new System.EventHandler(this.pctbP1Select_Click);
             // 
+            // lblWinstP1
+            // 
+            this.lblWinstP1.AutoSize = true;
+            this.lblWinstP1.Location = new System.Drawing.Point(173, 64);
+            this.lblWinstP1.Name = "lblWinstP1";
+            this.lblWinstP1.Size = new System.Drawing.Size(46, 17);
+            this.lblWinstP1.TabIndex = 13;
+            this.lblWinstP1.Text = "label1";
+            this.lblWinstP1.Click += new System.EventHandler(this.Label1_Click);
+            // 
+            // lblWinstP2
+            // 
+            this.lblWinstP2.AutoSize = true;
+            this.lblWinstP2.Location = new System.Drawing.Point(499, 64);
+            this.lblWinstP2.Name = "lblWinstP2";
+            this.lblWinstP2.Size = new System.Drawing.Size(46, 17);
+            this.lblWinstP2.TabIndex = 14;
+            this.lblWinstP2.Text = "label2";
+            // 
+            // lblWinstP3
+            // 
+            this.lblWinstP3.AutoSize = true;
+            this.lblWinstP3.Location = new System.Drawing.Point(815, 64);
+            this.lblWinstP3.Name = "lblWinstP3";
+            this.lblWinstP3.Size = new System.Drawing.Size(46, 17);
+            this.lblWinstP3.TabIndex = 15;
+            this.lblWinstP3.Text = "label3";
+            // 
             // frmPaardenBets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1091, 170);
+            this.Controls.Add(this.lblWinstP3);
+            this.Controls.Add(this.lblWinstP2);
+            this.Controls.Add(this.lblWinstP1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblDescP3);
             this.Controls.Add(this.lblDescP3Titel);
@@ -202,7 +236,7 @@
             this.Controls.Add(this.lblP3);
             this.Controls.Add(this.lblP2);
             this.Controls.Add(this.lblP1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPaardenBets";
             this.Text = "Kies uw paard";
             this.Load += new System.EventHandler(this.frmPaardenBets_Load);
@@ -229,5 +263,8 @@
         private System.Windows.Forms.Label lblDescP3;
         private System.Windows.Forms.Label lblDescP3Titel;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label lblWinstP1;
+        private System.Windows.Forms.Label lblWinstP2;
+        private System.Windows.Forms.Label lblWinstP3;
     }
 }
