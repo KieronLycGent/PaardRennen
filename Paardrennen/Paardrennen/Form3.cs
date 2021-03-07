@@ -69,5 +69,26 @@ namespace Paardrennen
         {
 
         }
+        int color;//Variabele voor de kleur
+        private void frmPaardenBets_Activated(object sender, EventArgs e)
+        {
+            
+            color = frmPaardrennen.getColor();
+            switch (color)
+            {
+                case 1:
+                    BackColor = Color.Green;
+                    break;
+                case 2:
+                    BackColor = Color.LightBlue;
+                    break;
+                case 3:
+                    BackColor = Color.HotPink;
+                    break;
+                case 4:
+                    BackColor = Color.DarkOrange;
+                    break;
+            }
+        }
     }
 }

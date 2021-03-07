@@ -25,6 +25,7 @@ namespace Paardrennen
         private int[] finStates;
         int arrayTeller;
         int totaal = 0;
+        int color;//Variabele voor de kleur
         private void frmOverzichtFin_Load(object sender, EventArgs e)
         {
             finMunz = frmPaardrennen.getFinMunz();
@@ -46,10 +47,26 @@ namespace Paardrennen
                 totaal = totaal + finMunz[i];
             }
         }
-
+        
         private void frmOverzichtFin_Activated(object sender, EventArgs e)
         {
             lblTotaal.Text = "Totaal gespendeerd: "+Environment.NewLine+"€"+totaal;
+            color = frmPaardrennen.getColor();
+            switch (color)
+            {
+                case 1:
+                    BackColor = Color.Green;
+                    break;
+                case 2:
+                    BackColor = Color.LightBlue;
+                    break;
+                case 3:
+                    BackColor = Color.HotPink;
+                    break;
+                case 4:
+                    BackColor = Color.DarkOrange;
+                    break;
+            }
         }
     }
 }

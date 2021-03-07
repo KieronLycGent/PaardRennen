@@ -35,6 +35,7 @@ namespace Paardrennen
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.stortenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.afhalenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.overzichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.achtergrondToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informatieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sluitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,8 +55,11 @@ namespace Paardrennen
             this.pctbArrow2 = new System.Windows.Forms.PictureBox();
             this.pctbArrow3 = new System.Windows.Forms.PictureBox();
             this.pctbArrow1 = new System.Windows.Forms.PictureBox();
-            this.overzichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnTestRace = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.standaardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blouwToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rozeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oranjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctbStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctbPaard3)).BeginInit();
@@ -65,14 +69,15 @@ namespace Paardrennen
             ((System.ComponentModel.ISupportInitialize)(this.pctbArrow2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctbArrow3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctbArrow1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBieden
             // 
-            this.btnBieden.Location = new System.Drawing.Point(36, 458);
-            this.btnBieden.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBieden.Location = new System.Drawing.Point(27, 596);
+            this.btnBieden.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBieden.Name = "btnBieden";
-            this.btnBieden.Size = new System.Drawing.Size(79, 45);
+            this.btnBieden.Size = new System.Drawing.Size(105, 55);
             this.btnBieden.TabIndex = 7;
             this.btnBieden.Text = "Geld inzetten";
             this.btnBieden.UseVisualStyleBackColor = true;
@@ -90,8 +95,8 @@ namespace Paardrennen
             this.sluitenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(868, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1157, 28);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -99,7 +104,7 @@ namespace Paardrennen
             // 
             this.stortenToolStripMenuItem.Name = "stortenToolStripMenuItem";
             this.stortenToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.stortenToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.stortenToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.stortenToolStripMenuItem.Text = "Storten";
             this.stortenToolStripMenuItem.Click += new System.EventHandler(this.stortenToolStripMenuItem_Click);
             // 
@@ -107,37 +112,49 @@ namespace Paardrennen
             // 
             this.afhalenToolStripMenuItem.Name = "afhalenToolStripMenuItem";
             this.afhalenToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.afhalenToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.afhalenToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
             this.afhalenToolStripMenuItem.Text = "Afhalen";
             this.afhalenToolStripMenuItem.Click += new System.EventHandler(this.afhalenToolStripMenuItem_Click);
             // 
+            // overzichtToolStripMenuItem
+            // 
+            this.overzichtToolStripMenuItem.Name = "overzichtToolStripMenuItem";
+            this.overzichtToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.overzichtToolStripMenuItem.Text = "Overzicht";
+            this.overzichtToolStripMenuItem.Click += new System.EventHandler(this.overzichtToolStripMenuItem_Click);
+            // 
             // achtergrondToolStripMenuItem
             // 
+            this.achtergrondToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.standaardToolStripMenuItem,
+            this.blouwToolStripMenuItem,
+            this.oranjeToolStripMenuItem,
+            this.rozeToolStripMenuItem});
             this.achtergrondToolStripMenuItem.Name = "achtergrondToolStripMenuItem";
-            this.achtergrondToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.achtergrondToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.achtergrondToolStripMenuItem.Text = "Achtergrond";
             this.achtergrondToolStripMenuItem.Click += new System.EventHandler(this.achtergrondToolStripMenuItem_Click);
             // 
             // informatieToolStripMenuItem
             // 
             this.informatieToolStripMenuItem.Name = "informatieToolStripMenuItem";
-            this.informatieToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.informatieToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.informatieToolStripMenuItem.Text = "Info";
             this.informatieToolStripMenuItem.Click += new System.EventHandler(this.informatieToolStripMenuItem_Click);
             // 
             // sluitenToolStripMenuItem
             // 
             this.sluitenToolStripMenuItem.Name = "sluitenToolStripMenuItem";
-            this.sluitenToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.sluitenToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.sluitenToolStripMenuItem.Text = "Sluiten";
             this.sluitenToolStripMenuItem.Click += new System.EventHandler(this.sluitenToolStripMenuItem_Click);
             // 
             // txtGokMunz
             // 
-            this.txtGokMunz.Location = new System.Drawing.Point(167, 483);
-            this.txtGokMunz.Margin = new System.Windows.Forms.Padding(2);
+            this.txtGokMunz.Location = new System.Drawing.Point(202, 626);
+            this.txtGokMunz.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGokMunz.Name = "txtGokMunz";
-            this.txtGokMunz.Size = new System.Drawing.Size(42, 20);
+            this.txtGokMunz.Size = new System.Drawing.Size(55, 22);
             this.txtGokMunz.TabIndex = 9;
             // 
             // tPaard
@@ -147,27 +164,30 @@ namespace Paardrennen
             // lblMunz
             // 
             this.lblMunz.AutoSize = true;
-            this.lblMunz.Location = new System.Drawing.Point(120, 458);
+            this.lblMunz.Location = new System.Drawing.Point(139, 596);
+            this.lblMunz.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMunz.Name = "lblMunz";
-            this.lblMunz.Size = new System.Drawing.Size(47, 13);
+            this.lblMunz.Size = new System.Drawing.Size(62, 17);
             this.lblMunz.TabIndex = 10;
             this.lblMunz.Text = "Geld: €0";
             // 
             // lblInzetStart
             // 
             this.lblInzetStart.AutoSize = true;
-            this.lblInzetStart.Location = new System.Drawing.Point(120, 486);
+            this.lblInzetStart.Location = new System.Drawing.Point(139, 630);
+            this.lblInzetStart.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInzetStart.Name = "lblInzetStart";
-            this.lblInzetStart.Size = new System.Drawing.Size(42, 13);
+            this.lblInzetStart.Size = new System.Drawing.Size(53, 17);
             this.lblInzetStart.TabIndex = 11;
             this.lblInzetStart.Text = "Ik zet €";
             // 
             // lblInzetEnd
             // 
             this.lblInzetEnd.AutoSize = true;
-            this.lblInzetEnd.Location = new System.Drawing.Point(214, 486);
+            this.lblInzetEnd.Location = new System.Drawing.Point(264, 630);
+            this.lblInzetEnd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInzetEnd.Name = "lblInzetEnd";
-            this.lblInzetEnd.Size = new System.Drawing.Size(18, 13);
+            this.lblInzetEnd.Size = new System.Drawing.Size(23, 17);
             this.lblInzetEnd.TabIndex = 12;
             this.lblInzetEnd.Text = "in.";
             // 
@@ -175,19 +195,20 @@ namespace Paardrennen
             // 
             this.lblOpEerstePlaats.AutoSize = true;
             this.lblOpEerstePlaats.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOpEerstePlaats.Location = new System.Drawing.Point(329, 399);
+            this.lblOpEerstePlaats.Location = new System.Drawing.Point(330, 609);
+            this.lblOpEerstePlaats.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOpEerstePlaats.Name = "lblOpEerstePlaats";
-            this.lblOpEerstePlaats.Size = new System.Drawing.Size(135, 31);
+            this.lblOpEerstePlaats.Size = new System.Drawing.Size(160, 38);
             this.lblOpEerstePlaats.TabIndex = 15;
             this.lblOpEerstePlaats.Text = "Filler text";
             // 
             // pctbStart
             // 
             this.pctbStart.Image = ((System.Drawing.Image)(resources.GetObject("pctbStart.Image")));
-            this.pctbStart.Location = new System.Drawing.Point(690, 399);
-            this.pctbStart.Margin = new System.Windows.Forms.Padding(2);
+            this.pctbStart.Location = new System.Drawing.Point(898, 493);
+            this.pctbStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pctbStart.Name = "pctbStart";
-            this.pctbStart.Size = new System.Drawing.Size(178, 111);
+            this.pctbStart.Size = new System.Drawing.Size(237, 137);
             this.pctbStart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbStart.TabIndex = 13;
             this.pctbStart.TabStop = false;
@@ -197,10 +218,10 @@ namespace Paardrennen
             // 
             this.pctbPaard3.BackColor = System.Drawing.Color.Transparent;
             this.pctbPaard3.Image = ((System.Drawing.Image)(resources.GetObject("pctbPaard3.Image")));
-            this.pctbPaard3.Location = new System.Drawing.Point(30, 289);
-            this.pctbPaard3.Margin = new System.Windows.Forms.Padding(2);
+            this.pctbPaard3.Location = new System.Drawing.Point(40, 356);
+            this.pctbPaard3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pctbPaard3.Name = "pctbPaard3";
-            this.pctbPaard3.Size = new System.Drawing.Size(100, 100);
+            this.pctbPaard3.Size = new System.Drawing.Size(133, 123);
             this.pctbPaard3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbPaard3.TabIndex = 4;
             this.pctbPaard3.TabStop = false;
@@ -209,10 +230,10 @@ namespace Paardrennen
             // 
             this.pctbPaard2.BackColor = System.Drawing.Color.Transparent;
             this.pctbPaard2.Image = ((System.Drawing.Image)(resources.GetObject("pctbPaard2.Image")));
-            this.pctbPaard2.Location = new System.Drawing.Point(30, 165);
-            this.pctbPaard2.Margin = new System.Windows.Forms.Padding(2);
+            this.pctbPaard2.Location = new System.Drawing.Point(40, 203);
+            this.pctbPaard2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pctbPaard2.Name = "pctbPaard2";
-            this.pctbPaard2.Size = new System.Drawing.Size(100, 100);
+            this.pctbPaard2.Size = new System.Drawing.Size(133, 123);
             this.pctbPaard2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbPaard2.TabIndex = 3;
             this.pctbPaard2.TabStop = false;
@@ -221,10 +242,10 @@ namespace Paardrennen
             // 
             this.pctbPaard1.BackColor = System.Drawing.Color.Transparent;
             this.pctbPaard1.Image = ((System.Drawing.Image)(resources.GetObject("pctbPaard1.Image")));
-            this.pctbPaard1.Location = new System.Drawing.Point(30, 46);
-            this.pctbPaard1.Margin = new System.Windows.Forms.Padding(2);
+            this.pctbPaard1.Location = new System.Drawing.Point(40, 57);
+            this.pctbPaard1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pctbPaard1.Name = "pctbPaard1";
-            this.pctbPaard1.Size = new System.Drawing.Size(100, 100);
+            this.pctbPaard1.Size = new System.Drawing.Size(133, 123);
             this.pctbPaard1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbPaard1.TabIndex = 2;
             this.pctbPaard1.TabStop = false;
@@ -233,10 +254,10 @@ namespace Paardrennen
             // 
             this.pctbFinish.BackColor = System.Drawing.Color.Transparent;
             this.pctbFinish.BackgroundImage = global::Paardrennen.Properties.Resources.finich;
-            this.pctbFinish.Location = new System.Drawing.Point(690, 52);
-            this.pctbFinish.Margin = new System.Windows.Forms.Padding(2);
+            this.pctbFinish.Location = new System.Drawing.Point(920, 64);
+            this.pctbFinish.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pctbFinish.Name = "pctbFinish";
-            this.pctbFinish.Size = new System.Drawing.Size(45, 343);
+            this.pctbFinish.Size = new System.Drawing.Size(60, 450);
             this.pctbFinish.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbFinish.TabIndex = 0;
             this.pctbFinish.TabStop = false;
@@ -244,9 +265,10 @@ namespace Paardrennen
             // pctbArrow2
             // 
             this.pctbArrow2.Image = global::Paardrennen.Properties.Resources.Arrow;
-            this.pctbArrow2.Location = new System.Drawing.Point(-30, 195);
+            this.pctbArrow2.Location = new System.Drawing.Point(-40, 240);
+            this.pctbArrow2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pctbArrow2.Name = "pctbArrow2";
-            this.pctbArrow2.Size = new System.Drawing.Size(60, 40);
+            this.pctbArrow2.Size = new System.Drawing.Size(80, 49);
             this.pctbArrow2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbArrow2.TabIndex = 17;
             this.pctbArrow2.TabStop = false;
@@ -255,9 +277,10 @@ namespace Paardrennen
             // pctbArrow3
             // 
             this.pctbArrow3.Image = global::Paardrennen.Properties.Resources.Arrow;
-            this.pctbArrow3.Location = new System.Drawing.Point(-30, 319);
+            this.pctbArrow3.Location = new System.Drawing.Point(-40, 393);
+            this.pctbArrow3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pctbArrow3.Name = "pctbArrow3";
-            this.pctbArrow3.Size = new System.Drawing.Size(60, 40);
+            this.pctbArrow3.Size = new System.Drawing.Size(80, 49);
             this.pctbArrow3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbArrow3.TabIndex = 18;
             this.pctbArrow3.TabStop = false;
@@ -266,38 +289,62 @@ namespace Paardrennen
             // pctbArrow1
             // 
             this.pctbArrow1.Image = global::Paardrennen.Properties.Resources.Arrow;
-            this.pctbArrow1.Location = new System.Drawing.Point(-30, 76);
+            this.pctbArrow1.Location = new System.Drawing.Point(-40, 94);
+            this.pctbArrow1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pctbArrow1.Name = "pctbArrow1";
-            this.pctbArrow1.Size = new System.Drawing.Size(60, 40);
+            this.pctbArrow1.Size = new System.Drawing.Size(80, 49);
             this.pctbArrow1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbArrow1.TabIndex = 19;
             this.pctbArrow1.TabStop = false;
             this.pctbArrow1.Visible = false;
             // 
-            // overzichtToolStripMenuItem
+            // pictureBox1
             // 
-            this.overzichtToolStripMenuItem.Name = "overzichtToolStripMenuItem";
-            this.overzichtToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.overzichtToolStripMenuItem.Text = "Overzicht";
-            this.overzichtToolStripMenuItem.Click += new System.EventHandler(this.overzichtToolStripMenuItem_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(898, 596);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 137);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btnTestRace
+            // standaardToolStripMenuItem
             // 
-            this.btnTestRace.Location = new System.Drawing.Point(742, 476);
-            this.btnTestRace.Name = "btnTestRace";
-            this.btnTestRace.Size = new System.Drawing.Size(75, 23);
-            this.btnTestRace.TabIndex = 20;
-            this.btnTestRace.Text = "TestRace";
-            this.btnTestRace.UseVisualStyleBackColor = true;
-            this.btnTestRace.Click += new System.EventHandler(this.btnTestRace_Click);
+            this.standaardToolStripMenuItem.Name = "standaardToolStripMenuItem";
+            this.standaardToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.standaardToolStripMenuItem.Text = "Gras";
+            this.standaardToolStripMenuItem.Click += new System.EventHandler(this.standaardToolStripMenuItem_Click);
+            // 
+            // blouwToolStripMenuItem
+            // 
+            this.blouwToolStripMenuItem.Name = "blouwToolStripMenuItem";
+            this.blouwToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.blouwToolStripMenuItem.Text = "Lucht";
+            this.blouwToolStripMenuItem.Click += new System.EventHandler(this.blouwToolStripMenuItem_Click);
+            // 
+            // rozeToolStripMenuItem
+            // 
+            this.rozeToolStripMenuItem.Name = "rozeToolStripMenuItem";
+            this.rozeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rozeToolStripMenuItem.Text = "Bubblegum";
+            this.rozeToolStripMenuItem.Click += new System.EventHandler(this.rozeToolStripMenuItem_Click);
+            // 
+            // oranjeToolStripMenuItem
+            // 
+            this.oranjeToolStripMenuItem.Name = "oranjeToolStripMenuItem";
+            this.oranjeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.oranjeToolStripMenuItem.Text = "Herfst";
+            this.oranjeToolStripMenuItem.Click += new System.EventHandler(this.oranjeToolStripMenuItem_Click);
             // 
             // frmPaardrennen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(868, 521);
-            this.Controls.Add(this.btnTestRace);
+            this.BackColor = System.Drawing.Color.Green;
+            this.ClientSize = new System.Drawing.Size(1157, 699);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pctbArrow1);
             this.Controls.Add(this.pctbArrow3);
             this.Controls.Add(this.pctbArrow2);
@@ -314,7 +361,7 @@ namespace Paardrennen
             this.Controls.Add(this.pctbFinish);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmPaardrennen";
             this.Text = "Paardrennen";
             this.Activated += new System.EventHandler(this.frmPaardrennen_Activated);
@@ -329,6 +376,7 @@ namespace Paardrennen
             ((System.ComponentModel.ISupportInitialize)(this.pctbArrow2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctbArrow3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctbArrow1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,7 +408,11 @@ namespace Paardrennen
         private System.Windows.Forms.PictureBox pctbArrow3;
         private System.Windows.Forms.PictureBox pctbArrow1;
         private System.Windows.Forms.ToolStripMenuItem overzichtToolStripMenuItem;
-        private System.Windows.Forms.Button btnTestRace;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem standaardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blouwToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rozeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem oranjeToolStripMenuItem;
     }
 }
 

@@ -29,7 +29,8 @@ namespace Paardrennen
         static int[] finStates = new int[900];
         static int arrayTeller = 0;
         private bool isTestRun = false;
-
+        private static int color = 1;//Variabele voor de kleur
+        private static int raceteller = 0;//aantal races
         private void stortenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             finState = 0;
@@ -283,6 +284,12 @@ namespace Paardrennen
                 paard = 0;
                 updateMunz();
                 winnaar = 0;
+                raceteller++;
+                if (raceteller == 5)
+                {
+                    MessageBox.Show("U hebt al "+ raceteller+ " keer gespeeld." + Environment.NewLine + "Neem eventjes pauze en speel dan weer verder.", "Pauze?", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    raceteller = 0;
+                }
             }
         }
 
@@ -381,6 +388,11 @@ namespace Paardrennen
 
         private void btnTestRace_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
             actie = true;
             isTestRun = true;
             paard = 99;
@@ -390,6 +402,35 @@ namespace Paardrennen
             pctbPaard3.Image = Properties.Resources.jokky_on_horse_groen;
             paardActie();
             lblOpEerstePlaats.Visible = true;
+        }
+
+        public static int getColor()// getter voor de kleuren
+        {
+            return color;
+        }
+
+        private void standaardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            color = 1;
+            BackColor = Color.Green;
+        }
+
+        private void blouwToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            color = 2;
+            BackColor = Color.LightBlue;
+        }
+
+        private void rozeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            color = 3;
+            BackColor = Color.HotPink;
+        }
+
+        private void oranjeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            color = 4;
+            BackColor = Color.DarkOrange;
         }
     }
 }

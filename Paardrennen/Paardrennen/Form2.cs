@@ -26,7 +26,7 @@ namespace Paardrennen
 
         int munz;
         int finState;
-
+        int color;//Variabele voor de kleur
         private void frmFinancien_Activated(object sender, EventArgs e)
         {
             finState = frmPaardrennen.getFinState();
@@ -43,6 +43,26 @@ namespace Paardrennen
                 btnChange.Text = "Afhalen";
             }
             updateMunz();
+
+            color = frmPaardrennen.getColor();
+            switch (color)
+            {
+                case 1:
+                    BackColor = Color.Green;
+                    break;
+                case 2:
+                    BackColor = Color.LightBlue;
+                    break;
+                case 3:
+                    BackColor = Color.HotPink;
+                    break;
+                case 4:
+                    BackColor = Color.DarkOrange;
+                    break;
+            }
+
+
+
         }
 
         private void updateMunz()
@@ -59,6 +79,11 @@ namespace Paardrennen
             {
                 txtChange.Select();
                 MessageBox.Show("U moet een geldig getal ingeven.", "Fout: geen getal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (GokMunz >=5000)
+            {
+                txtChange.Select();
+                MessageBox.Show("U mag niet meer dan 5.000 euro per keer storten.", "Fout: Te veel", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (finState == 0)
             {
@@ -80,6 +105,8 @@ namespace Paardrennen
                     txtChange.Select();
                 }
             }
+            
+
             txtChange.Text = null;
             updateMunz();
         }
