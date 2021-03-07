@@ -54,6 +54,8 @@ namespace Paardrennen
             this.pctbArrow2 = new System.Windows.Forms.PictureBox();
             this.pctbArrow3 = new System.Windows.Forms.PictureBox();
             this.pctbArrow1 = new System.Windows.Forms.PictureBox();
+            this.overzichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnTestRace = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctbStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctbPaard3)).BeginInit();
@@ -68,7 +70,7 @@ namespace Paardrennen
             // btnBieden
             // 
             this.btnBieden.Location = new System.Drawing.Point(36, 458);
-            this.btnBieden.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBieden.Margin = new System.Windows.Forms.Padding(2);
             this.btnBieden.Name = "btnBieden";
             this.btnBieden.Size = new System.Drawing.Size(79, 45);
             this.btnBieden.TabIndex = 7;
@@ -82,6 +84,7 @@ namespace Paardrennen
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stortenToolStripMenuItem,
             this.afhalenToolStripMenuItem,
+            this.overzichtToolStripMenuItem,
             this.achtergrondToolStripMenuItem,
             this.informatieToolStripMenuItem,
             this.sluitenToolStripMenuItem});
@@ -132,7 +135,7 @@ namespace Paardrennen
             // txtGokMunz
             // 
             this.txtGokMunz.Location = new System.Drawing.Point(167, 483);
-            this.txtGokMunz.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGokMunz.Margin = new System.Windows.Forms.Padding(2);
             this.txtGokMunz.Name = "txtGokMunz";
             this.txtGokMunz.Size = new System.Drawing.Size(42, 20);
             this.txtGokMunz.TabIndex = 9;
@@ -172,7 +175,7 @@ namespace Paardrennen
             // 
             this.lblOpEerstePlaats.AutoSize = true;
             this.lblOpEerstePlaats.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOpEerstePlaats.Location = new System.Drawing.Point(335, 441);
+            this.lblOpEerstePlaats.Location = new System.Drawing.Point(329, 399);
             this.lblOpEerstePlaats.Name = "lblOpEerstePlaats";
             this.lblOpEerstePlaats.Size = new System.Drawing.Size(135, 31);
             this.lblOpEerstePlaats.TabIndex = 15;
@@ -271,12 +274,30 @@ namespace Paardrennen
             this.pctbArrow1.TabStop = false;
             this.pctbArrow1.Visible = false;
             // 
+            // overzichtToolStripMenuItem
+            // 
+            this.overzichtToolStripMenuItem.Name = "overzichtToolStripMenuItem";
+            this.overzichtToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.overzichtToolStripMenuItem.Text = "Overzicht";
+            this.overzichtToolStripMenuItem.Click += new System.EventHandler(this.overzichtToolStripMenuItem_Click);
+            // 
+            // btnTestRace
+            // 
+            this.btnTestRace.Location = new System.Drawing.Point(742, 476);
+            this.btnTestRace.Name = "btnTestRace";
+            this.btnTestRace.Size = new System.Drawing.Size(75, 23);
+            this.btnTestRace.TabIndex = 20;
+            this.btnTestRace.Text = "TestRace";
+            this.btnTestRace.UseVisualStyleBackColor = true;
+            this.btnTestRace.Click += new System.EventHandler(this.btnTestRace_Click);
+            // 
             // frmPaardrennen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(868, 521);
+            this.Controls.Add(this.btnTestRace);
             this.Controls.Add(this.pctbArrow1);
             this.Controls.Add(this.pctbArrow3);
             this.Controls.Add(this.pctbArrow2);
@@ -293,7 +314,7 @@ namespace Paardrennen
             this.Controls.Add(this.pctbFinish);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPaardrennen";
             this.Text = "Paardrennen";
             this.Activated += new System.EventHandler(this.frmPaardrennen_Activated);
@@ -338,6 +359,8 @@ namespace Paardrennen
         private System.Windows.Forms.PictureBox pctbArrow2;
         private System.Windows.Forms.PictureBox pctbArrow3;
         private System.Windows.Forms.PictureBox pctbArrow1;
+        private System.Windows.Forms.ToolStripMenuItem overzichtToolStripMenuItem;
+        private System.Windows.Forms.Button btnTestRace;
     }
 }
 

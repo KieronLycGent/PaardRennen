@@ -63,14 +63,16 @@ namespace Paardrennen
             else if (finState == 0)
             {
                 frmPaardrennen.setMunz(munz + GokMunz);
-                btnClose.Select();//miss moet ik automatisch hiden? --> need feedback ~Kieron
+                btnClose.Select();
+                frmPaardrennen.addFinArrs(finState, GokMunz);// Geeft de finState en het aantal geld door naar de arrays
             }
             else if(finState == 1)
             {
                 if((munz - Convert.ToInt32(txtChange.Text)) >= 0) //Om in het rood te gaan te voorkomen
                 {
                     frmPaardrennen.setMunz(munz - GokMunz);
-                    btnClose.Select();//Zie line63
+                    btnClose.Select();
+                    frmPaardrennen.addFinArrs(finState, GokMunz); //Geeft de finState en het aantal geld door naar de arrays
                 }
                 else
                 {

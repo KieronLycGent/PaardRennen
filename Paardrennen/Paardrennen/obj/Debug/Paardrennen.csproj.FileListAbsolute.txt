@@ -58,3 +58,4 @@ C:\Users\gooss\Documents\Lyceum\ToegepasteInformatica\C#\Paardenrennen\Paardrenn
 C:\Users\gooss\Documents\Lyceum\ToegepasteInformatica\C#\Paardenrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.csproj.CoreCompileInputs.cache
 C:\Users\gooss\Documents\Lyceum\ToegepasteInformatica\C#\Paardenrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.exe
 C:\Users\gooss\Documents\Lyceum\ToegepasteInformatica\C#\Paardenrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.pdb
+D:\School\6IB\Paardrennen\Paardrennen\Paardrennen\obj\Debug\Paardrennen.frmOverzichtFin.resources

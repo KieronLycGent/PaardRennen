@@ -25,6 +25,10 @@ namespace Paardrennen
         private int winnaar = 0; //0 is NULLvalue --> dus het mag niet nul zijn op het ezind van het spel
         private int gok = 0;
         static int gokMunz = 0;
+        static int[] finMunz = new int[900];
+        static int[] finStates = new int[900];
+        static int arrayTeller = 0;
+        private bool isTestRun = false;
 
         private void stortenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -112,7 +116,7 @@ namespace Paardrennen
 
         private void paardActie()
         {
-            if (paard != 0)
+            if (paard != 0 && paard != 99)
             {
                 gok = Convert.ToInt32(txtGokMunz.Text);
                 munz = munz - Convert.ToInt32(txtGokMunz.Text);
@@ -121,6 +125,12 @@ namespace Paardrennen
                 tPaard.Interval = 100;
                 tPaard.Enabled = true;
               
+            }
+            else if(paard == 99)
+            {
+                gok = 0;
+                tPaard.Interval = 100;
+                tPaard.Enabled = true;
             }
             else
             {
@@ -239,26 +249,32 @@ namespace Paardrennen
                 tPaard.Enabled = false;
                 btnBieden.Enabled = true;
                 txtGokMunz.Enabled = true;
-                
-                if(winnaar == paard)
+                if(paard != 99)
                 {
-                    MessageBox.Show("Gefeliciteerd u hebt gewonnen!", "Gewonnen!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    switch (paard)
+                    if (winnaar == paard)
                     {
-                        case 1:
-                            munz = munz + (gok * 2);
-                            break;
-                        case 2:
-                            munz = munz + (gok * 3);
-                            break;
-                        case 3:
-                            munz = munz + (gok * 5);
-                            break;
+                        MessageBox.Show("Gefeliciteerd u hebt gewonnen!", "Gewonnen!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        switch (paard)
+                        {
+                            case 1:
+                                munz = munz + (gok * 2);
+                                break;
+                            case 2:
+                                munz = munz + (gok * 3);
+                                break;
+                            case 3:
+                                munz = munz + (gok * 5);
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Helaas, u hebt verloren, probeer het nog een keer.", "Verloren...", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Helaas, u hebt verloren, probeer het nog een keer.", "Verloren...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Race is over","Testrace over",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
                 lblOpEerstePlaats.Visible = false;
                 pctbArrow1.Visible = false;
@@ -324,6 +340,56 @@ namespace Paardrennen
         public static int getGokMunz() //functie voor winst berekenen in form3
         {
             return gokMunz;
+        }
+
+        public static void addFinArrs(int newFinState, int amount)
+        {
+            if(newFinState == 0) // als Finance state (finState) = 0 --> Storten / als finState = 1 --> Afhalen
+            {
+                finStates[arrayTeller] = newFinState;
+                finMunz[arrayTeller] = amount;
+                arrayTeller++;
+            }
+            else
+            {
+                finStates[arrayTeller] = newFinState;
+                finMunz[arrayTeller] = 0 - amount;
+                arrayTeller++;
+            }
+        }
+
+        public static int[] getFinMunz()
+        {
+            return finMunz;
+        }
+
+        public static int[] getFinStates()
+        {
+            return finStates;
+        }
+
+        public static int getArrayTeller()
+        {
+            return arrayTeller;
+        }
+
+        private void overzichtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOverzichtFin frmOverzicht = new frmOverzichtFin();
+            frmOverzicht.Show();
+        }
+
+        private void btnTestRace_Click(object sender, EventArgs e)
+        {
+            actie = true;
+            isTestRun = true;
+            paard = 99;
+            //They like to move it move it (Jpeg--> GIF)
+            pctbPaard1.Image = Properties.Resources.jokky_on_horse;
+            pctbPaard2.Image = Properties.Resources.jokky_on_horse_blouw;
+            pctbPaard3.Image = Properties.Resources.jokky_on_horse_groen;
+            paardActie();
+            lblOpEerstePlaats.Visible = true;
         }
     }
 }
